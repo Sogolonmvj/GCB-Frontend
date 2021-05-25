@@ -1,0 +1,197 @@
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+
+#firstpage {
+    height: 100vh;
+}
+
+body {
+   background-image: url('../images/Illustration.svg');
+   background-repeat: no-repeat;
+   background-position: right -50px;
+   background-color: white;
+}
+
+h1 {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 60px;
+}
+
+#registerbutton {
+
+    background-color:#ffffff;
+    color:#BADC58;
+
+    width: 120px;
+    height: 50px;
+    border-radius: 5px;
+
+    font: Mulish;
+    font-size: 16px;
+    font-weight: 700;
+
+    transition: 700ms;
+
+    &:hover {
+        background-color:lightgray;
+        color:#7bdf38;
+    }
+
+}
+
+button {
+
+    background-color: blue;
+    span {
+            color: rgb(186, 220, 88);
+            font-family: Mulish;
+            font-weight: bold;
+    }
+
+    &:hover {
+        background-color: lightslategray;
+    }
+
+}
+
+a {
+    color: white;
+    font: Mulish;
+    font-weight: 500;
+
+    &:hover {
+        color: whitesmoke;
+    }
+    
+    &:active {
+        color: gray;
+    }
+
+}
+
+#Healthy {
+
+    span {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 30px;
+    color: rgb(186, 220, 88);
+    }
+
+}
+
+#register {
+    max-width: 500px;
+}
+
+#logo {
+    margin: 0 auto;
+}
+
+#text {
+    width: 85vw;
+}
+
+#searchbox {
+    width: 28vw;
+    height: 52px;
+    border-radius: 5px;
+    border-color: #2D3561;
+}
+
+.search::placeholder {
+    color: #B4B4B4;
+    font: Mulish;
+    font-size: 20px;
+}
+
+#searchicon {
+
+   img{
+       background-image: url(../images/icons/search.svg);
+       background-repeat: no-repeat;
+       width: 52px;
+       height: 52px;
+       border-radius: 5px;
+
+       &:hover {
+            background-color: black;
+        }
+   }
+
+}
+
+#secondpage {
+    height: 100vh;
+    background-color: #FAFAFC;
+}
+
+#seerecipe {
+    background-color: #BADC58;
+    color: white;
+
+    font: Mulish;
+    font-size: 16px;
+
+    width: 154px;
+    height: 48px;
+
+    transition: 700ms;
+
+    &:hover {
+        background-color: #bbdc58b6;
+    }
+
+}
+
+#recipename {
+    font: Montserrat;
+    font-weight: 700;
+    font-size: 24px;
+
+    color: #1D164D;
+}
+
+#card {
+
+    transition: box-shadow 700ms;
+    box-shadow: 0 0 25px rgba(33,33,33,.2);
+
+    width: 528px;
+    height: 225px;
+    border-radius: 7px;
+
+    &:hover {
+        box-shadow: none;
+    }
+
+}
+
+#title {
+
+    height: 8vh;
+    padding-top: 30px;
+
+    h3 {
+        font: Montserrat;
+        font-weight: 700;
+        font-size: 32px;
+
+        color: #1D164D;
+    }
+
+    h6 {
+        font: Mulish;
+        font-size: 16px;
+
+        color:#9E9BAF;
+    }
+
+}
+
+#image {
+    width: 253px;
+    height: 225px;
+
+    transform: translate(-5%);
+}

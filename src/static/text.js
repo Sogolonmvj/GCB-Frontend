@@ -1,0 +1,3 @@
+// class 
+
+// export default text;
