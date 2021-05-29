@@ -1,7 +1,5 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
-import SearchBox from './components/SearchBox/searchBox';
-import {blog} from './components/Blog/blog';
 import RecipeCard from './components/Cards/recipeCard';
 import recipes from './components/Recipes/recipes';
 
