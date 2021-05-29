@@ -5,6 +5,7 @@ import App from './App';
 import AppSecondPage from './AppSecondPage';
 import AppThirdPage from './AppThirdPage';
 import AppFourthPage from './AppFourthPage';
+import AppFifthPage from './AppFifthPage';
 
 import './styles/main.scss';
 
@@ -14,6 +15,7 @@ ReactDOM.render(
         <AppSecondPage />
         <AppThirdPage />
         <AppFourthPage />
+        <AppFifthPage />
     </React.StrictMode>, 
     document.getElementById('root')
 );

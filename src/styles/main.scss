@@ -1,6 +1,7 @@
 @import 'node_modules/bootstrap/scss/bootstrap.scss';
 
 :root {
+    width: 100vw;
     overflow-x: hidden;
 }
 
@@ -257,7 +258,7 @@ a {
     }
 
     h4 {
-        font: Montsserat;
+        font: Montserrat;
         font-size: 24px;
         font-weight: 700;
 
@@ -294,7 +295,7 @@ a {
 #slider {
     width: 82vw;
 
-    transform: translate(13%, 15%);
+    transform: translate(20.5%, 15%);
 }
 
 .slick-prev:before,
@@ -319,14 +320,102 @@ a {
 }
 
 #btn-left {
-
     background-color: transparent;
 
     width: 50px;
     height: 50px;
     
     transform: translate(-100%, 547%);
-
 }
 
+#fifthpage {
+    width: 100vw;
+    height: 100vh;
 
+    background-image: URL('../images/bloco_final_image.svg');
+    background-repeat: no-repeat;
+    background-position: 56vw -3vh;
+}
+
+#membership {
+
+    transform: translate(40%, 140%);
+
+    #join-title {
+        font: Montserrat;
+        font-size: 32px;
+        font-weight: 700;
+
+        color: #2D3561;
+    }
+
+    #member-email {
+
+        #enteremail {
+            width: 344px;
+            height: 54px;
+
+            border-radius: 5px;
+            border-color: #707070;
+        }
+
+        #enteremail::placeholder {
+            font: Mulish;
+            font-size: 16px;
+
+            color: #9E9BAF;
+        }
+
+        #join {
+
+            background-color: #BADC58;
+            color: white;
+            
+            font: Mulish;
+            font-size: 16px;
+            
+            width: 93px;
+            height: 54px;
+            
+            transition: 700ms;
+            
+            &:hover {
+                background-color: #bbdc58b6;
+            }
+    
+        }
+
+    }
+    
+}
+
+#bar {
+    transform: translateY(700%);
+}
+
+#policy,
+#terms {
+    font: Mulish;
+    font-size: 16px;
+
+    text-decoration: none;
+
+    color: #9E9BAF;
+}
+
+#terms {
+    transform: translate(390%);
+}
+
+#policy {
+    transform: translate(560%);
+}
+
+#copyright {
+    font: Mulish;
+    font-size: 16px;
+    
+    color: #1D164D;
+
+    transform: translate(-20%);
+}
