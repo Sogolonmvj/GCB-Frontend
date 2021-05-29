@@ -3,8 +3,6 @@ import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 
 const AppFifthPage = () => {
 
-    // if() return null;
-
     return (
     <BrowserRouter>
         <div id="fifthpage" className="d-flex flex-horizontal">
