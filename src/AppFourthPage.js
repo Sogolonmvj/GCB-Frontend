@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Slider from "react-slick";
 import info from './components/Blog/blog';
 import InfoCard from './components/Cards/infoCard';
 import "slick-carousel/slick/slick.scss";
 import "slick-carousel/slick/slick-theme.scss";
-import { Component } from 'react';
 
 function Arrow(props) {
     let className = props.type === "next" ? "nextArrow" : "prevArrow";

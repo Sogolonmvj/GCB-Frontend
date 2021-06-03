@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function RecipeCard ({ recipe }) {
 
@@ -9,7 +10,7 @@ export default function RecipeCard ({ recipe }) {
             <img id="image" className="card-img-top img-fluid" style={{width: 253 + 'px'}, {height: 225 + 'px'}} src={recipe.image} alt="Card image cap"/>
             <div id="card-body" className="card-body d-flex flex-column justify-content-center" style={{width: 187 + 'px'}, {height: 127 + 'px'}}>
                 <h5 id="recipename" className="card-title">{recipe.title}</h5>
-                <a href="*" id="seerecipe" className="btn mt-2">See Recipe</a>
+                <Link to={recipe.link} id="seerecipe" className="btn mt-2">See Recipe</Link>
             </div>
         </div>
     );

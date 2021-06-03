@@ -31,7 +31,7 @@ h1 {
     height: 50px;
     border-radius: 5px;
 
-    font: Mulish;
+    font-family: Mulish;
     font-size: 16px;
     font-weight: 700;
 
@@ -44,24 +44,9 @@ h1 {
 
 }
 
-button {
-
-    background-color: blue;
-    span {
-            color: rgb(186, 220, 88);
-            font-family: Mulish;
-            font-weight: bold;
-    }
-
-    &:hover {
-        background-color: lightslategray;
-    }
-
-}
-
 a {
     color: white;
-    font: Mulish;
+    font-family: Mulish;
     font-weight: 500;
 
     &:hover {
@@ -100,17 +85,21 @@ a {
 #searchbox {
     width: 28vw;
     height: 52px;
+
     border-radius: 5px;
     border-color: #2D3561;
+
+    transform: translate(2.5%);
 }
 
 .search::placeholder {
     color: #B4B4B4;
-    font: Mulish;
+    font-family: Mulish;
     font-size: 20px;
 }
 
 #searchicon {
+    transform: translate(10%);
 
    img {
        background-image: url(../images/icons/search.svg);
@@ -136,7 +125,7 @@ a {
     background-color: #BADC58;
     color: white;
 
-    font: Mulish;
+    font-family: Mulish;
     font-size: 16px;
 
     width: 154px;
@@ -151,7 +140,7 @@ a {
 }
 
 #recipename {
-    font: Montserrat;
+    font-family: Montserrat;
     font-weight: 700;
     font-size: 24px;
 
@@ -179,7 +168,7 @@ a {
     padding-top: 30px;
 
     h3 {
-        font: Montserrat;
+        font-family: Montserrat;
         font-weight: 700;
         font-size: 32px;
 
@@ -187,7 +176,7 @@ a {
     }
 
     h6 {
-        font: Mulish;
+        font-family: Mulish;
         font-size: 16px;
 
         color:#9E9BAF;
@@ -215,7 +204,7 @@ a {
     transform:translate(21%, 45%);
 
     h3 {
-        font: Montserrat;
+        font-family: Montserrat;
         font-size: 32px;
         font-weight: 700;
 
@@ -225,7 +214,7 @@ a {
     }
 
     p {
-        font: Mulish;
+        font-family: Mulish;
         font-size: 16px;
         font-weight: regular;
 
@@ -239,7 +228,7 @@ a {
 }
 
 .knowmore {
-    transform: translate(-70%, 50%);
+    transform: translate(-80%, 50%);
 }
 
 #carousel {
@@ -258,7 +247,7 @@ a {
     }
 
     h4 {
-        font: Montserrat;
+        font-family: Montserrat;
         font-size: 24px;
         font-weight: 700;
 
@@ -270,7 +259,7 @@ a {
     }
 
     .author-name {
-        font: Mulish;
+        font-family: Mulish;
         font-size: 16px;
 
         color: #9E9BAF;
@@ -342,7 +331,7 @@ a {
     transform: translate(40%, 140%);
 
     #join-title {
-        font: Montserrat;
+        font-family: Montserrat;
         font-size: 32px;
         font-weight: 700;
 
@@ -360,7 +349,7 @@ a {
         }
 
         #enteremail::placeholder {
-            font: Mulish;
+            font-family: Mulish;
             font-size: 16px;
 
             color: #9E9BAF;
@@ -371,7 +360,7 @@ a {
             background-color: #BADC58;
             color: white;
             
-            font: Mulish;
+            font-family: Mulish;
             font-size: 16px;
             
             width: 93px;
@@ -395,7 +384,7 @@ a {
 
 #policy,
 #terms {
-    font: Mulish;
+    font-family: Mulish;
     font-size: 16px;
 
     text-decoration: none;
@@ -404,18 +393,82 @@ a {
 }
 
 #terms {
-    transform: translate(390%);
+    transform: translate(340%);
 }
 
 #policy {
-    transform: translate(560%);
+    transform: translate(480%);
 }
 
 #copyright {
-    font: Mulish;
+    font-family: Mulish;
     font-size: 16px;
     
     color: #1D164D;
 
     transform: translate(-20%);
+}
+
+#signup {
+    height: 100vh;
+    width: 100vw;
+
+    background-image: url('../images/Illustration.svg');
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 250%;
+}
+
+form {
+    transform: translate(29%);
+
+    label {
+        font-family: Mulish;
+        font-size: 16px;
+        font-weight: 700;
+
+        color: #9E9BAF;
+    }
+
+    input {
+        font-weight: 400;
+    }
+
+    input::placeholder {
+        font-family: Mulish;
+        font-size: 16px;
+
+        color: #B4B4B4;
+    } 
+}
+
+#registertitle {
+    transform: translate(19%, 15%);
+
+    h2 {
+        font-family: Montserrat;
+
+        color: #2D3561;
+    }
+
+}
+
+.form-group {
+    margin-top: 5px;
+}
+
+#submit {
+    font-family: Mulish;
+    font-weight: 700;
+
+    background-color: #BADC58;
+    color: white;
+}
+
+#divuf {
+    margin-left: 10px;
+}
+
+#labelcity {
+    margin-right: 10px;
 }
