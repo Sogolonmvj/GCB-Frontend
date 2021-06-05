@@ -7,6 +7,7 @@ import AppThirdPage from './AppThirdPage';
 import AppFourthPage from './AppFourthPage';
 import AppFifthPage from './AppFifthPage';
 import Register from './register';
+import Test from './test';
 
 import './styles/main.scss';
 
@@ -17,7 +18,8 @@ ReactDOM.render(
         <AppThirdPage />
         <AppFourthPage />
         <AppFifthPage />
-        <Register />
+        {/* <Register /> */}
+        <Test />
     </React.StrictMode>, 
     document.getElementById('root')
 );
