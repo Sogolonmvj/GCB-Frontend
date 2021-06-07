@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Link } from 'react-router-dom';
+import { Link as Scroll } from 'react-scroll';
 
 const AppFifthPage = () => {
 
@@ -10,7 +11,7 @@ const AppFifthPage = () => {
                 <h3 id="join-title">Join our membership<br/> to get special offer</h3>
                 <div id="member-email" className="d-flex flex-horizontal mt-4">
                     <input id="enteremail" type="text" placeholder="Enter your email address" className="form-control px-3" />
-                    <Link to="/register" id="join" className="btn join mx-3 d-flex flex-horizontal justify-content-center align-items-center">Join</Link>
+                    <Scroll to="signup"><span id="join" className="btn join mx-3 d-flex flex-horizontal justify-content-center align-items-center">Join</span></Scroll>
                 </div>
                 <div id="bar" className="d-flex flex-horizontal">
                     <p id="copyright">© Copyrights 2019 Stack. All Rights Reserved.</p>
@@ -18,9 +19,6 @@ const AppFifthPage = () => {
                     <Link to="/terms" id="terms"><span>Terms and Condition</span></Link>
                 </div>
             </div>
-            {/* <Switch>
-                <Route path='/register'><h1>Register</h1></Route>
-            </Switch> */}
         </div>
     </BrowserRouter>
     );

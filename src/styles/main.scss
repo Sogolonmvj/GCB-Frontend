@@ -2,15 +2,13 @@
 
 :root {
     width: 100vw;
-    overflow-x: hidden;
+    // overflow-x: hidden;
 }
 
 #firstpage {
     height: 100vh;
-}
 
-body {
-   background-image: url('../images/Illustration.svg');
+    background-image: url('../images/Illustration.svg');
    background-repeat: no-repeat;
    background-position: right -50px;
    background-color: white;
@@ -37,6 +35,8 @@ h1 {
 
     transition: 700ms;
 
+    cursor: pointer;
+
     &:hover {
         background-color:lightgray;
         color:#7bdf38;
@@ -48,6 +48,8 @@ a {
     color: white;
     font-family: Mulish;
     font-weight: 500;
+
+    text-decoration: none;
 
     &:hover {
         color: whitesmoke;
@@ -390,6 +392,10 @@ a {
     text-decoration: none;
 
     color: #9E9BAF;
+
+    &:hover {
+        color: gray;
+    }
 }
 
 #terms {
@@ -417,10 +423,11 @@ a {
     background-repeat: no-repeat;
     background-position-x: 100%;
     background-position-y: 250%;
+
 }
 
 form {
-    transform: translate(29%);
+    transform: translate(29%, -8%);
 
     label {
         font-family: Mulish;
@@ -443,7 +450,7 @@ form {
 }
 
 #registertitle {
-    transform: translate(19%, 15%);
+    transform: translate(19%, -80%);
 
     h2 {
         font-family: Montserrat;
@@ -471,4 +478,50 @@ form {
 
 #labelcity {
     margin-right: 10px;
+}
+
+#submit {
+    transition: 700ms;
+
+    &:hover {
+        background-color: #bbdc58b6;
+    }
+}
+
+.scrolllink {
+    transform: translate(0%,);
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    &:hover {
+        color: whitesmoke;
+    }
+
+    &:active {
+        color: gray;
+    }
+
+}
+
+.gomain {
+    transform: translate(80%, -80%);
+
+    span {
+        font: Mulish;
+        font-size: 18px;
+
+        color: #ffffff;
+
+        &:hover {
+            color: whitesmoke;
+        }
+
+        &:active {
+            color: gray;
+        }
+
+    }
+    
 }

@@ -1,9 +1,9 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import RecipeCard from './components/Cards/recipeCard';
 import recipes from './components/Recipes/recipes';
 
-const App = () => {
+const AppSecondPage = () => {
     return (
     <BrowserRouter>
         <div id="secondpage">
@@ -28,4 +28,4 @@ const App = () => {
     );
 }
 
-export default App;
+export default AppSecondPage;

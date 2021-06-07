@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import { setAccount } from './helpers/account';
 
 class Register extends Component {
-
+    
     constructor(props){
        super(props);
   
@@ -20,9 +22,10 @@ class Register extends Component {
         if(!fields["name"]){
            formIsValid = false;
            errors["name"] = "This field must be filled in!";
-        }
+        } 
   
         if(typeof fields["name"] !== "undefined"){
+
            if(!fields["name"].match(/^[a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ -]+$/)){
               formIsValid = false;
               errors["name"] = "Only letters, accents and hyphens!";
@@ -120,7 +123,7 @@ class Register extends Component {
 
                 if(fields["postcode"].match(/^[0-9-]+$/)) {
 
-                    var zipcode = fields["postcode"].split("-").join("");
+                    return true;
 
                 } else {
                     formIsValid = false;
@@ -142,15 +145,20 @@ class Register extends Component {
 
         e.preventDefault();
 
-        if(this.handleValidation()){
+        if (this.handleValidation()) {
+            const formData = new FormData(e.target);
+            const account = Object.fromEntries(formData);
+            
+            setAccount(account); // it does not store CPF because it is sensitive data. Also, it should be encrypted if it uses HTTPS to transfer data to the server
+
            alert("Form submitted!");
-        }else{
+        } else {
            alert("Form has errors.")
         }
-  
+
     }
 
-    handleChange(field, e){         
+    handleChange(field, e) {         
         let fields = this.state.fields;
         fields[field] = e.target.value;        
         this.setState({fields});
@@ -159,7 +167,6 @@ class Register extends Component {
     handleBlurCep(field, e) {
         let fields = this.state.fields;
         fields[field] = e.target.value;
-        this.setState({fields});
     
         const value = fields["postcode"]?.split("-").join("");
     
@@ -167,78 +174,104 @@ class Register extends Component {
             return;
         }
 
-        const showData = (result) => {
-            for (let field in result) {
-                if(document.querySelector("#" + field)) {
-                    document.querySelector("#" + field).value = result[field]
+        const storeData = (result) => {
+
+            localStorage.setItem(fields["postcode"], JSON.stringify(result));
+
+            for (let area in result) {
+                if(document.querySelector("#" + area)) {
+                    document.querySelector("#" + area).value = result[area];
                 }
             }
+
         }
-    
-        fetch(`https://viacep.com.br/ws/${value}/json/`)
-            .then(res => { 
-                if(!res.ok) throw new Error('Error');
-                return res.json()
-            .then(data => showData(data))
-            })
-            .catch(Error => console.log("Error:" + Error))
+
+        const showData = (stored) => {
+
+            for (let area in stored) {
+                if(document.querySelector("#" + area)) {
+                    document.querySelector("#" + area).value = stored[area];
+                }
+            }
+
+        }
+
+        const cachedData = localStorage.getItem(fields["postcode"]);
+
+        if (cachedData) {
+           showData(JSON.parse(cachedData));
+        } else {
+            fetch(`https://viacep.com.br/ws/${value}/json/`)
+                .then(res => { 
+                    if(!res.ok) throw new Error('Error');
+                    return res.json()
+                .then(data => storeData(data))
+                })
+                .catch(Error => console.log("Error:" + Error))
+        }
     
     }
 
     render() {
         return (
-            <div id="signup" >
-                <div id="Healthy" className="container d-flex flex-horizontal pt-3">
-                    <span id="Logo" className="container d-flex flex-horizontal justify-content mx-2">Healthy Food</span>
-                </div>
-                <div id="registertitle" ><h2 className="d-flex flex-horizontal">Register</h2></div>
-                <form name="contactform" className="contactform d-flex flex-column" style={{width: 30 + 'rem'}} onSubmit={this.contactSubmit.bind(this)} >
-                    <div>
-                        <fieldset>
-                            <div className="form-group">
-                                <label>Full Name</label>
-                                <input type="text" className="form-control" placeholder="Enter your Full Name" autoComplete="name" onChange={this.handleChange.bind(this, "name")} value={this.state.fields["name"] || ''} required/>
-                                <span style={{color: "red"}}>{this.state.errors["name"]}</span>
-                            </div>
-                            <div className="form-group">
-                                <label>Email</label>
-                                <input type="text" className="form-control" placeholder="Enter your Email" autoComplete="email" onChange={this.handleChange.bind(this, "email")} value={this.state.fields["email"] || ''} required/>
-                                <span style={{color: "red"}}>{this.state.errors["email"]}</span>
-                            </div>
-                            <div className="form-group">
-                                <label>Birth date</label>
-                                <input type="date" className="form-control" onChange={this.handleChange.bind(this, "birthdate")} value={this.state.fields["birthdate"] || ''} />
-                                <span style={{color: "red"}}>{this.state.errors["birthdate"]}</span>
-                            </div>
-                            <div className="form-group">
-                                <label>Registration Number</label>
-                                <input type="text" className="form-control" placeholder="Enter your Registration Number or CPF" onChange={this.handleChange.bind(this, "CPF")} value={this.state.fields["CPF"] || ''} />
-                                <span style={{color: "red"}}>{this.state.errors["CPF"]}</span>
-                            </div>
-                            <div className="form-group">
-                                <label>Postcode</label>
-                                <input id="cep" type="text" className="form-control" placeholder="Enter your Postcode" onBlur={this.handleBlurCep.bind(this, "postcode")} onChange={this.handleChange.bind(this, "postcode")} defaultValue={this.state.fields["postcode"] || ''} required />
-                                <span style={{color: "red"}}>{this.state.errors["postcode"]}</span>
-                            </div>
-                            <div className="form-group d-flex flex-horizontal mt-3">
-                                <label id="labelcity">City</label>
-                                <input id="localidade" type="text" className="form-control" placeholder="Enter your City" disabled={true} required />
-                                <div id="divuf" className="d-flex flex-horizontal">
-                                    <label className="mx-2">State</label>
-                                    <input id="uf" type="text" className="form-control" style={{width: 5 + 'rem'}} placeholder="State" disabled={true} required />
-                                </div>
-                            </div>
-                            <div className="form-group">
-                                <label>Address</label>
-                                <input id="logradouro" type="text" className="form-control" placeholder="Enter your Address" disabled={true} required />
-                            </div>
-                            <div>
-                                <button id="submit" className="btn btn-round container mt-4 d-flex flex-horizontal justify-content-center">Submit</button>
-                            </div>
-                        </fieldset>
+            <BrowserRouter>
+                <div id="signup" >
+                    <div id="Healthy" className="container d-flex flex-horizontal pt-3">
+                        <span id="Logo" className="container d-flex flex-horizontal justify-content mx-2">Healthy Food</span>
                     </div>
-                </form>
-            </div>
+                    <div className="gomain">
+                        <a href="/"><span className="gomainspan d-flex flex-horizontal">MAIN PAGE</span></a>
+                    </div>
+
+                    <div id="registertitle" ><h2 className="d-flex flex-horizontal">Register</h2></div>
+                    <form name="contactform" className="contactform d-flex flex-column" style={{width: 30 + 'rem'}} onSubmit={this.contactSubmit.bind(this)} >
+                        <div>
+                            <fieldset>
+                                <div className="form-group">
+                                    <label>Full Name</label>
+                                    <input id="fullname" type="text" className="form-control" name="fullname" placeholder="Enter your Full Name" autoComplete="name" onChange={this.handleChange.bind(this, "name")} value={this.state.fields["name"] || ''} required/>
+                                    <span style={{color: "red"}}>{this.state.errors["name"]}</span>
+                                </div>
+                                <div className="form-group">
+                                    <label>Email</label>
+                                    <input id="emailaddress" type="text" className="form-control" name="email" placeholder="Enter your Email" autoComplete="email" onChange={this.handleChange.bind(this, "email")} value={this.state.fields["email"] || ''} required/>
+                                    <span style={{color: "red"}}>{this.state.errors["email"]}</span>
+                                </div>
+                                <div className="form-group">
+                                    <label>Birth date</label>
+                                    <input id="birthdate" type="date" className="form-control" name="birthdate" onChange={this.handleChange.bind(this, "birthdate")} value={this.state.fields["birthdate"] || ''} />
+                                    <span style={{color: "red"}}>{this.state.errors["birthdate"]}</span>
+                                </div>
+                                <div className="form-group">
+                                    <label>Registration Number</label>
+                                    <input id="cpf" type="text" className="form-control" placeholder="Enter your Registration Number or CPF" onChange={this.handleChange.bind(this, "CPF")} value={this.state.fields["CPF"] || ''} />
+                                    <span style={{color: "red"}}>{this.state.errors["CPF"]}</span>
+                                </div>
+                                <div className="form-group">
+                                    <label>Postcode</label>
+                                    <input id="cep" type="text" className="form-control" name="postcode" placeholder="Enter your Postcode" onBlur={this.handleBlurCep.bind(this, "postcode")} onChange={this.handleChange.bind(this, "postcode")} defaultValue={this.state.fields["postcode"] || ''} required />
+                                    <span style={{color: "red"}}>{this.state.errors["postcode"]}</span>
+                                </div>
+                                <div className="form-group d-flex flex-horizontal mt-3">
+                                    <label id="labelcity">City</label>
+                                    <input id="localidade" type="text" className="form-control" name="city" placeholder="Enter your City" disabled={true} required />
+                                    <div id="divuf" className="d-flex flex-horizontal">
+                                        <label className="mx-2">State</label>
+                                        <input id="uf" type="text" className="form-control" name="state" style={{width: 5 + 'rem'}} placeholder="State" disabled={true} required />
+                                    </div>
+                                </div>
+                                <div className="form-group">
+                                    <label>Address</label>
+                                    <input id="logradouro" type="text" className="form-control" name="address" placeholder="Enter your Address" disabled={true} required />
+                                </div>
+                                <div>
+                                    <button id="submit" className="btn btn-round container mt-4 d-flex flex-horizontal justify-content-center">Submit</button>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </form>
+                </div>
+            </BrowserRouter>
         );
     }
 }
