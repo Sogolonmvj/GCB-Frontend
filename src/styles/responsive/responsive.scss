@@ -1,0 +1,254 @@
+@import '../firstpage.scss';
+
+@media (max-width: 661px) {
+    :root {
+        width: 41.4rem;
+    }
+
+    #firstpage {
+        width: 41.4rem;
+        height: 100vh;
+
+        background-image: none;
+
+        #right {
+            transform: translate(-12%);
+        }
+
+        .scrolllink {
+            color:#BADC58;
+
+            &:hover {
+                color: #7bdf38;
+            }
+
+        }
+
+        #registerbutton {
+            background-color: #BADC58;
+            color: white;
+
+            &:hover {
+                color: #7bdf38;
+            }
+
+        }
+
+        #content { 
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            transform: translate(0%, -20%);
+
+            #text {
+                transform: translate(0%);
+            }
+
+            #searchbox {
+                width: 18rem;
+
+                transform: translate(0%);
+            }
+
+            h1 {
+                font-family: Montserrat;
+                font-weight: 700;
+                font-size: 40px;
+            }
+
+        }
+    }
+
+    #secondpage {
+        width: 41.4rem;
+        height: fit-content;
+
+        #card {
+            margin-top: 10px;
+        }
+
+        #cards {
+            transform: translateY(-2%);
+        }
+
+        #superiorcards {
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        #inferiorcards {
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    #thirdpage {
+        width: 41.4rem;
+        height: 100vh;
+
+        justify-content: center;
+
+        background: none;
+
+        #bigbox {
+
+            transform:translate(0%, 40%);
+        
+            h3 {
+                width: 20rem;
+
+                font-family: Montserrat;
+                font-size: 25px;
+                font-weight: 700;
+
+                justify-content: center;
+        
+                color: #2D3561;
+        
+                transform: translate(0%, -20%);
+            }
+        
+            p {
+                font-family: Mulish;
+                font-size: 16px;
+                font-weight: regular;
+
+                justify-content: center;
+        
+                color: #BCBCBC;
+            }
+
+            .knowmore {
+                transform: translate(0%, 10%);
+            }
+        
+        }
+    }
+
+    #fourthpage {
+        width: 41.4rem;
+        height: 100vh;
+
+        align-items: center;
+
+        #slider {
+            width: 23rem;
+        
+            justify-content: center;
+            transform: translate(43%, 15%);
+        }
+
+        #title {
+            transform: translate(0%);
+
+            position: center;
+            
+            justify-content: center;
+
+            position: top;
+        }
+
+    }
+
+    #fifthpage {
+        width: 41.4rem;
+        height: 100vh;
+
+        background: none;
+
+        justify-content: center;
+
+        #terms {
+            transform: translate(20%);
+        }
+        
+        #policy {
+            transform: translate(25%);
+        }
+
+        #membership {
+
+            justify-content: center;
+
+            transform: translate(-5%, 130%);
+
+            margin: 0;
+
+            #member-email {
+
+                display: flex;
+
+                flex-direction: column;
+
+                a {
+
+                    justify-content: center;
+
+                    span {
+                        margin-top: 20px;
+
+                        transform: translate(-5%);
+
+                        width: 21.7rem;
+                    }
+
+                }
+            }
+            
+        }
+
+        #copyright {
+
+            transform: translate(0%);
+
+        }
+        
+        #bar {
+            transform: translateY(180%);
+
+            justify-content: bottom;
+
+            display: flex;
+            flex-direction: column-reverse;
+
+        }
+    }
+
+    #signup {
+
+        background: none;
+
+        .contactform {
+            transform: translate(3%);
+        }
+
+        .form-group {
+            width: 15rem;
+        }
+
+        #submit {
+            width: 15rem;
+
+            transform: translate(-50%);
+        }
+
+        .gomain {
+
+            .gomainspan {
+                color:#BADC58;
+
+                transform: translate(-52%, 2400%);
+            }
+            
+        }
+
+    }
+
+}

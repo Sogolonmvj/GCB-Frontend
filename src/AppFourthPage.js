@@ -23,7 +23,41 @@ export default class AppFourthPage extends Component {
             infinite: false,
             slidesToShow: 3.3,
             nextArrow: <Arrow type="next" />,
-            prevArrow: <Arrow type="prev" />
+            prevArrow: <Arrow type="prev" />,
+            responsive: [
+                {
+                    breakpoint: 1000,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        dots: true,
+                        nextArrow: false,
+                        prevArrow: false,
+                    }
+                },
+
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        dots: false,
+                        nextArrow: <Arrow type="next" />,
+                        prevArrow: <Arrow type="prev" />,
+                    }
+                },
+
+                {
+                    breakpoint: 1300,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        dots: false,
+                        nextArrow: <Arrow type="next" />,
+                        prevArrow: <Arrow type="prev" />,
+                    }
+                }
+            ]
         };
 
         return (

@@ -1,0 +1,94 @@
+#fifthpage {
+    height: 100vh;
+
+    background-image: URL('../images/bloco_final_image.svg');
+    background-repeat: no-repeat;
+    background-position: right -3vh;
+}
+
+#membership {
+
+    transform: translate(40%, 140%);
+
+    #join-title {
+        font-family: Montserrat;
+        font-size: 32px;
+        font-weight: 700;
+
+        color: #2D3561;
+    }
+
+    #member-email {
+
+        #enteremail {
+            width: 344px;
+            height: 54px;
+
+            border-radius: 5px;
+            border-color: #707070;
+        }
+
+        #enteremail::placeholder {
+            font-family: Mulish;
+            font-size: 16px;
+
+            color: #9E9BAF;
+        }
+
+        #join {
+
+            background-color: #BADC58;
+            color: white;
+            
+            font-family: Mulish;
+            font-size: 16px;
+            
+            width: 93px;
+            height: 54px;
+            
+            transition: 700ms;
+            
+            &:hover {
+                background-color: #bbdc58b6;
+            }
+    
+        }
+
+    }
+    
+}
+
+#bar {
+    transform: translateY(700%);
+}
+
+#policy,
+#terms {
+    font-family: Mulish;
+    font-size: 16px;
+
+    text-decoration: none;
+
+    color: #9E9BAF;
+
+    &:hover {
+        color: gray;
+    }
+}
+
+#terms {
+    transform: translate(340%);
+}
+
+#policy {
+    transform: translate(480%);
+}
+
+#copyright {
+    font-family: Mulish;
+    font-size: 16px;
+    
+    color: #1D164D;
+
+    transform: translate(-20%);
+}

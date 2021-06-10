@@ -1,0 +1,108 @@
+#signup {
+    height: 100vh;
+
+    background-image: url('../images/Illustration.svg');
+    background-repeat: no-repeat;
+    background-position: right -50px;
+
+}
+
+form {
+    transform: translate(29%, -8%);
+
+    label {
+        font-family: Mulish;
+        font-size: 16px;
+        font-weight: 700;
+
+        color: #9E9BAF;
+    }
+
+    input {
+        font-weight: 400;
+    }
+
+    input::placeholder {
+        font-family: Mulish;
+        font-size: 16px;
+
+        color: #B4B4B4;
+    } 
+}
+
+#registertitle {
+    transform: translate(19%, -80%);
+
+    h2 {
+        font-family: Montserrat;
+
+        color: #2D3561;
+    }
+
+}
+
+.form-group {
+    margin-top: 5px;
+}
+
+#submit {
+    font-family: Mulish;
+    font-weight: 700;
+
+    background-color: #BADC58;
+    color: white;
+}
+
+#divuf {
+    margin-left: 10px;
+}
+
+#labelcity {
+    margin-right: 10px;
+}
+
+#submit {
+    transition: 700ms;
+
+    &:hover {
+        background-color: #bbdc58b6;
+    }
+}
+
+.scrolllink {
+    transform: translate(0%);
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    &:hover {
+        color: whitesmoke;
+    }
+
+    &:active {
+        color: gray;
+    }
+
+}
+
+.gomain {
+    transform: translate(80%, -80%);
+
+    span {
+        font: Mulish;
+        font-size: 18px;
+
+        color: #ffffff;
+
+        &:hover {
+            color: whitesmoke;
+        }
+
+        &:active {
+            color: gray;
+        }
+
+    }
+    
+}

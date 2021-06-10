@@ -1,0 +1,41 @@
+#fourthpage {
+    height: 100vh;
+    
+    background-color: #FAFAFC;
+}
+
+#slider {
+    width: 82vw;
+
+    transform: translate(20.5%, 15%);
+}
+
+.slick-prev:before,
+.slick-next:before {
+
+    color: #9E9BAF;
+
+}
+
+#btn-right {
+    background-color: transparent;
+
+    width: 50px;
+    height: 50px;
+
+    transform: translate(2400%, -470%);
+
+    #arrowright {
+        transform: translate(0%, 10%);
+    }
+
+}
+
+#btn-left {
+    background-color: transparent;
+
+    width: 50px;
+    height: 50px;
+    
+    transform: translate(-100%, 547%);
+}

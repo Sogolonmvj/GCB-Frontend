@@ -20,11 +20,11 @@ const App = () => {
                 </div> 
             </div>
 
-            <div>
+            <div id="content" >
                 <h1 id="text" className="container d-flex flex-horizontal mt-5 pt-5">
                     <span className="container d-flex flex-horizontal mt-5">Ready for <br /> Trying a new <br /> recipe?</span>
                 </h1>
-                <div className="d-flex flex-horizontal align-items-center">
+                <div className="searchrecipe d-flex flex-horizontal align-items-center">
                     <SearchBox id="searchbox" placeholder="Search healthy recipes" handleChange={(e) => console.log(e.target.value)} />
                     <span id="searchicon" className="d-flex flex-horizontal mx-3 mt-5"><img alt="" /></span>
                 </div>

@@ -1,0 +1,225 @@
+
+@media (min-width: 661px) and (max-width: 1000px) {
+    :root {
+        width: 100vw;
+    }
+
+    #firstpage {
+        width: 100vw;
+        height: 100vh;
+
+        background: none;
+
+        .scrolllink {
+            color:#BADC58;
+
+            &:hover {
+                color: #7bdf38;
+            }
+            
+        }
+
+        #registerbutton {
+            background-color: #BADC58;
+            color: white;
+
+            &:hover {
+                background-color: #7bdf38;
+            }
+
+        }
+
+        #content { 
+
+            justify-content: center;
+
+            align-items: center;
+
+            transform: translate(0%, -20%);
+
+            #text {
+                transform: translate(0%);
+            }
+
+            #searchbox {
+                width: 18rem;
+
+                transform: translate(0%);
+            }
+
+            h1 {
+                font-family: Montserrat;
+                font-weight: 700;
+                font-size: 40px;
+            }
+
+        }
+    }
+
+    #secondpage {
+        width: 100vw;
+        height: fit-content;
+
+        #card {
+            margin-top: 10px;
+        }
+
+        #cards {
+            transform: translateY(-2%);
+        }
+
+        #superiorcards {
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #inferiorcards {
+
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    #thirdpage {
+        width: 100vw;
+        height: 100vh;
+
+        justify-content: center;
+
+        background-image: none;
+
+        #bigbox {
+
+            width: 30rem;
+
+            transform:translate(0%, 40%);
+        
+            h3 {
+                width: 20rem;
+
+                font-family: Montserrat;
+                font-size: 25px;
+                font-weight: 700;
+
+                justify-content: center;
+        
+                color: #2D3561;
+        
+                transform: translate(0%, -20%);
+            }
+        
+            p {
+                font-family: Mulish;
+                font-size: 16px;
+                font-weight: regular;
+
+                justify-content: center;
+        
+                color: #BCBCBC;
+            }
+
+            .knowmore {
+                transform: translate(0%, 10%);
+            }
+        
+        }
+    }
+
+    #fourthpage {
+        width: 100vw;
+        height: 100vh;
+
+        align-items: center;
+
+        justify-content: center;
+
+        #slider {
+            width: 24rem;
+        
+            justify-content: center;
+
+            align-items: center;
+
+            align-content: center;
+
+            transform: translate(50%, 20%);
+        }
+
+        #title {
+            transform: translate(0%);
+
+            position: center;
+            
+            justify-content: center;
+
+            position: top;
+        }
+
+    }
+
+    #fifthpage {
+        width: 100vw;
+        height: 100vh;
+
+        justify-content: center;
+
+        background-image: none;
+
+        #terms {
+            transform: translate(20%);
+        }
+        
+        #policy {
+            transform: translate(25%);
+        }
+
+        #membership {
+
+            justify-content: center;
+
+            transform: translate(0%, 130%);
+
+            margin: 0;
+
+            #member-email {
+
+                display: flex;
+
+                flex-direction: column;
+
+                a {
+
+                    justify-content: center;
+
+                    span {
+                        margin-top: 20px;
+
+                        transform: translate(-5%);
+
+                        width: 21.7rem;
+                    }
+
+                }
+            }
+            
+        }
+
+        #copyright {
+
+            transform: translate(0%);
+
+        }
+        
+        #bar {
+            transform: translateY(350%);
+
+            justify-content: bottom;
+
+            display: flex;
+            flex-direction: column-reverse;
+
+        }
+    }
+}

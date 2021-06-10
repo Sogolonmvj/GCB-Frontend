@@ -1,0 +1,82 @@
+#thirdpage {
+    height: 100vh;
+
+    background-color: white;
+    background-image: URL('../images/bloco_services.svg');
+    background-repeat: no-repeat;
+}
+
+#bigbox {
+
+    transform: translate(21%, 45%);
+
+    h3 {
+        font-family: Montserrat;
+        font-size: 32px;
+        font-weight: 700;
+
+        color: #2D3561;
+
+        transform: translate(-3%, -20%);
+    }
+
+    p {
+        font-family: Mulish;
+        font-size: 16px;
+        font-weight: regular;
+
+        color: #BCBCBC;
+    }
+
+}
+
+.new-line {
+    white-space: pre-line;
+}
+
+.knowmore {
+    transform: translate(-80%, 50%);
+}
+
+#carousel {
+    transform: translate(17%, 25%);
+}
+
+#infocard {
+
+    transition: box-shadow 700ms;
+    box-shadow: 0 0 25px rgba(33,33,33,.2);
+
+    border-radius: 6px;
+
+    &:hover {
+        box-shadow: none;
+    }
+
+    h4 {
+        font-family: Montserrat;
+        font-size: 24px;
+        font-weight: 700;
+
+        color:#2D3561;
+    }
+
+    .author {
+        transform: translateY(70%);
+    }
+
+    .author-name {
+        font-family: Mulish;
+        font-size: 16px;
+
+        color: #9E9BAF;
+
+        transform: translate(10%, 20%);
+    }
+
+}
+
+.arrow {
+    transform: translate(950%, -106%);
+
+}

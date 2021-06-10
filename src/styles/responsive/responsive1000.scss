@@ -1,0 +1,190 @@
+@media (min-width: 1000px) and (max-width: 1200px) {
+    :root {
+        width: 120vw;
+    }
+
+    #firstpage {
+        width: 120vw;
+        height: 100vh;
+
+        #right {
+            transform: translate(-5%);
+        }
+
+        #content { 
+
+            justify-content: center;
+
+            align-items: center;
+
+            transform: translate(0%, -20%);
+
+            #text {
+                transform: translate(0%);
+            }
+
+            #searchbox {
+                width: 18rem;
+
+                transform: translate(0%);
+            }
+
+            h1 {
+                font-family: Montserrat;
+                font-weight: 700;
+                font-size: 40px;
+            }
+
+        }
+    }
+
+    #secondpage {
+        width: 120vw;
+        height: fit-content;
+
+        #card {
+
+            margin-top: 10px;
+        }
+
+        #cards {
+
+            transform: translateY(-3%);
+        }
+
+        #superiorcards {
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #inferiorcards {
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    #thirdpage {
+        width: 120vw;
+        height: 100vh;
+
+        justify-content: center;
+
+        #bigbox {
+
+            width: 45rem;
+
+            transform:translate(20%, 30%);
+        
+            h3 {
+                width: 40rem;
+
+                font-family: Montserrat;
+                font-size: 40px;
+                font-weight: 700;
+
+                justify-content: center;
+        
+                color: #2D3561;
+        
+                transform: translate(0%, -50%);
+            }
+        
+            p {
+                font-family: Mulish;
+                font-size: 22px;
+                font-weight: regular;
+
+                justify-content: center;
+        
+                color: #BCBCBC;
+            }
+
+            .knowmore {
+                transform: translate(0%, 40%);
+            }
+        
+        }
+    }
+
+    #fourthpage {
+        width: 120vw;
+        height: 100vh;
+
+        align-items: center;
+
+        justify-content: center;
+
+        #slider {
+            width: 48rem;
+        
+            justify-content: center;
+
+            align-items: center;
+
+            align-content: center;
+
+            transform: translate(30%, 20%);
+
+            #btn-right {
+                background-color: transparent;
+            
+                width: 50px;
+                height: 50px;
+            
+                transform: translate(1540%, -470%);
+            
+                #arrowright {
+                    transform: translate(0%, 10%);
+                }
+            
+            }
+
+        }
+
+        #title {
+            transform: translate(0%);
+
+            position: center;
+            
+            justify-content: center;
+
+            position: top;
+        }
+
+    }
+
+    #fifthpage {
+        width: 120vw;
+        height: 100vh;
+
+        #terms {
+            width: 10rem;
+
+            transform: translate(300%, 500%);
+        }
+        
+        #policy {
+            width: 10rem;
+
+            transform: translate(420%, 400%);
+        }
+
+        #copyright {
+
+            transform: translateY(300%);
+
+        }
+        
+        #bar {
+            transform: translateY(180%);
+
+            justify-content: bottom;
+
+            display: flex;
+            flex-direction: column-reverse;
+
+        }
+    }
+}

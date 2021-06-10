@@ -1,0 +1,75 @@
+#secondpage {
+    height: 100vh;
+    background-color: #FAFAFC;
+}
+
+#seerecipe {
+
+    background-color: #BADC58;
+    color: white;
+
+    font-family: Mulish;
+    font-size: 16px;
+
+    width: 154px;
+    height: 40px;
+
+    transition: 700ms;
+
+    &:hover {
+        background-color: #bbdc58b6;
+    }
+
+}
+
+#recipename {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 24px;
+
+    color: #1D164D;
+}
+
+#card {
+
+    transition: box-shadow 700ms;
+    box-shadow: 0 0 25px rgba(33,33,33,.2);
+
+    width: 528px;
+    height: 225px;
+    border-radius: 7px;
+
+    &:hover {
+        box-shadow: none;
+    }
+
+}
+
+#title {
+
+    height: 8vh;
+    padding-top: 30px;
+
+    h3 {
+        font-family: Montserrat;
+        font-weight: 700;
+        font-size: 32px;
+
+        color: #1D164D;
+    }
+
+    h6 {
+        font-family: Mulish;
+        font-size: 16px;
+
+        color:#9E9BAF;
+    }
+
+}
+
+#image {
+    width: 253px;
+    height: 225px;
+
+    transform: translate(-5%);
+}
