@@ -15,12 +15,12 @@
 
             transform: translate(0%, -20%);
 
-            #text {
-                transform: translate(0%);
+            .searchrecipe {
+                transform: translate(4.5%);
             }
 
             #searchbox {
-                width: 18rem;
+                width: 25rem;
 
                 transform: translate(0%);
             }
@@ -28,7 +28,7 @@
             h1 {
                 font-family: Montserrat;
                 font-weight: 700;
-                font-size: 40px;
+                font-size: 5rem;
             }
 
         }
